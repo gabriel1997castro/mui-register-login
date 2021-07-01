@@ -1,4 +1,4 @@
-import { Grid, Paper, makeStyles, Avatar, TextField, FormControlLabel, Checkbox } from '@material-ui/core'
+import { Grid, Paper, makeStyles, Avatar, TextField, FormControlLabel, Checkbox, Button, Link, Typography } from '@material-ui/core'
 import { LockOutlined } from '@material-ui/icons'
 import React from 'react'
 
@@ -11,6 +11,9 @@ const useStyles = makeStyles({
   },
   avatar: {
     backgroundColor: '#6200bd'
+  },
+  button: {
+    margin: '10px 0',
   }
 })
 
@@ -34,6 +37,13 @@ export default function Login() {
           }
           label="Lembrar a senha"
           />
+          <Button className={classes.button} type='submit' color="primary" fullWidth variant="contained">Entrar</Button>
+          <Typography>
+            <Link href="#">Esqueci a senha</Link>
+          </Typography>
+          <Typography> Você tem uma conta ?
+            <Link href="#">Cadastre-se</Link>
+          </Typography>
       </Paper>
     </Grid>
       )
