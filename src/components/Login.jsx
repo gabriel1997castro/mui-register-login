@@ -1,4 +1,4 @@
-import { Grid, Paper, makeStyles, Avatar } from '@material-ui/core'
+import { Grid, Paper, makeStyles, Avatar, TextField } from '@material-ui/core'
 import { LockOutlined } from '@material-ui/icons'
 import React from 'react'
 
@@ -23,6 +23,8 @@ export default function Login() {
           <Avatar className={classes.avatar}><LockOutlined /></Avatar>
         </Grid>
         <h2>Login</h2>
+        <TextField label='Email, CPF ou PIS' placeholder="Digite o usuário" fullWidth required/>
+        <TextField label='Senha' placeholder="Digite a senha" fullWidth required type="password"/>
       </Paper>
     </Grid>
   )
